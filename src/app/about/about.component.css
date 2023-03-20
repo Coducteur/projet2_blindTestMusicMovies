@@ -1,0 +1,89 @@
+.body-contain {
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/bg2.gif);
+  background-color: rgb(4, 8, 4);
+}
+
+.about {
+  font-family: "Rubik";
+  text-align: center;
+  font-size: 15px;
+  margin-top: 25vh;
+  margin-left: 5vw;
+}
+
+
+body {
+  width: 100%;
+  height: 100%;
+  background: black;
+  margin: 0;
+  /* Center items */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crawl {
+  overflow: hidden;
+  /* Evite la scrollbar */
+  /* centrage de l'élément' */
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 800px;
+  margin: 0 0 0 -400px;
+  top: auto;
+  bottom: 0;
+  height: 100em;
+  /* cosmétique */
+  color: rgb(226, 191, 119);
+  font-size: 64px;
+  text-align: justify;
+  /* Applique la transformation  */
+  transform-origin: center bottom;
+  transform: perspective(50vh) rotateX(30deg);
+  /* transform-origin: center bottom;
+  transform: perspective(50vh) rotateX(30deg); */
+
+}
+
+.crawl div {
+  /* positionne la div en bas de l'écran (non visible) */
+  /* l'animation la fait remonter progressivement */
+  position: absolute;
+  top: 100%;
+  animation-delay: 1s;
+  /* Démarre l'animation après la première */
+  animation-duration: 30s;
+  animation-name: crawl;
+  animation-timing-function: linear;
+}
+
+@keyframes crawl {
+  0% {
+    top: 100%;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: .6;
+    /* disparition progressive à la fin */
+  }
+
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.crawl h2,
+h3,
+h4,
+p {
+  display: flex;
+  justify-content: center;
+  margin-left: 5vw;
+}

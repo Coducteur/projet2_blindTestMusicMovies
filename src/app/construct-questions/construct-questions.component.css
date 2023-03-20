@@ -1,0 +1,125 @@
+p,
+button {
+    font-size: 2em;
+}
+
+.timer-EQ-score_Container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+h3 {
+    font-size: 5em;
+}
+
+.showPosterGoodAnswer {
+    margin-top: 150px;
+}
+
+.numQuestion {
+    display: flex;
+    justify-content: center;
+    color: rgb(226, 191, 119);
+    font-family: "Rubik", sans-serif;
+    font-size: 300%;
+}
+
+#count {
+    color: rgb(127, 255, 0);
+    font-size: 400%;
+    height: 10vh;
+    padding-left: 1.5vw;
+    padding-top: 2.5vh;
+    border-radius: 50%;
+    font-size: 45px;
+}
+
+.text {
+    color: rgb(226, 191, 119);
+    font-size: 80%;
+}
+
+
+.resultatIntermediaire {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+    align-items: center;
+    color: rgb(226, 191, 119);
+}
+
+.resultatIntermediaire img {
+    width: 12vw;
+    margin: 1em;
+    margin-top: 2vh;
+    border: 3px solid rgb(226, 191, 119);
+}
+
+.resultatIntermediaire h3 {
+    font-size: 300%;
+}
+
+/* bouton */
+.bn632-hover {
+    width: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 45px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    margin-top: 2vh;
+}
+
+.bn632-hover:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+    outline: none;
+}
+
+.bn632-hover.bn19 {
+    background-image: linear-gradient(to right,
+            #f5ce62,
+            #e43603,
+            #fa7199,
+            #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 800px) {
+    .resultatIntermediaire img {
+        width: 35vw;
+    }
+
+    .text {
+        font-size: 60%;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .resultatIntermediaire img {
+        width: 40vw;
+    }
+}

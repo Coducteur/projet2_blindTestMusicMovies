@@ -1,0 +1,31 @@
+.body {
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-image: url(../../assets/images/bg-Jeux.jpg);
+}
+
+p{
+  font-family: 'Rubik', sans-serif;
+  color: rgb(226, 191, 119);
+  font-size: 55px;
+  text-align: center;
+  margin-top: 10vh;
+}
+img{
+  align-items: center;
+  width: 10vw;
+
+}
+.homeBtn{
+  width: 100vw;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 40px;
+  }
+  
+}

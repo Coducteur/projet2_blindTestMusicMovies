@@ -1,0 +1,18 @@
+.body {
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: repeat;
+  background-image: url(../../assets/images/bg-Jeux.jpg);
+}
+
+@media screen and (max-width: 1215px) {
+  .body {
+    background-repeat: repeat;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .body {
+    background-repeat: repeat;
+  }
+}

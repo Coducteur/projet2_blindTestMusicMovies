@@ -1,0 +1,46 @@
+<div *ngIf="indexAffichageComposant !== 3" class="test">
+
+    <p class="numQuestion">question: {{question+1}}</p>
+
+    <div class="timer-EQ-score_Container">
+        <p id="count"><span class="text">Time: </span> {{count}}</p>
+        <app-equalizer></app-equalizer>
+        <app-score [scoreSendToCpnScore]="scoreToShow" [questionSendToCpnScore]="questionToScoreChange"
+            (ScoreFinalToDisplay)="transferedScoreToDisplay($event)"></app-score>
+    </div>
+</div>
+<!-- ng class a construire pour attribuer la valeur autoplay à la balise audio -->
+<audio src="{{audioSrc}}" autoplay></audio>
+<!-- <p>joue: la music de <strong>{{easyMoviesMusics[this.question].title}}</strong> {{audioSrc}} </p> -->
+
+
+
+<!-- input pour l'envoie de la question au child 'construct-answers' -->
+<div class="showPosterGoodAnswer" *ngIf="indexAffichageComposant === 1">
+    <app-construct-answers (returnedAnswer)="answerReceived($event)" [questionNumber]="question"
+        [counterQuestion]="count"></app-construct-answers>
+</div>
+
+<!-- affichage du résultat intermédiaire -->
+<div class="resultatIntermediaire" *ngIf="indexAffichageComposant === 2">
+    <div *ngIf="!(questionAnswered.goodAnswer)">
+        <h3>C'est dommage !</h3>
+        <p class="score"> score obtenu: 0</p>
+        <audio src="../../assets/pouetpouetpouetpouet.mp3" autoplay></audio>
+    </div>
+
+    <div *ngIf="(questionAnswered.goodAnswer)">
+        <h3>Bien joué !</h3>
+        <p class="score"> score obtenu: {{questionAnswered.score*33}}</p>
+        <!-- <audio src="../../assets/winwinwintada.mp3" autoplay></audio> -->
+    </div>
+    <p>la bonne réponse était :</p>
+    <p><strong>{{arrayOfMovies[this.question].title}}</strong></p>
+    <img src="{{this.arrayOfMovies[this.question].answer}}" alt="">
+    <button (click)="isQuizzFinished()" class="bn632-hover bn19">NEXT</button>
+</div>
+
+<!-- a la fin des questions: -->
+<div *ngIf="indexAffichageComposant === 3">
+    <app-result [finalScoreToDisplay]="scoreFinalToDisplay"></app-result>
+</div>

@@ -1,0 +1,23 @@
+#score {
+  color: rgb(127, 255, 0);
+  font-size: 400%;
+  height: 10vh;
+  padding-left: 3vw;
+  padding-top: 2vh;
+  border-radius: 50%;
+  font-size: 45px;
+}
+
+.text {
+  color: rgb(226, 191, 119);
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .text {
+      font-size: 60%;
+  }
+  
+  }
+  

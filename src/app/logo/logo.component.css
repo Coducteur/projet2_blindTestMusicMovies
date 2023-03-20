@@ -1,0 +1,87 @@
+#cube {
+  width: 8vw;
+  height: 8vh;
+  padding-top: 2vh;
+  margin-left: 3vw;
+  /*pour centrer le cube sur la page*/
+  transform-style: preserve-3d;
+  transition: transform 5s;
+  transform: translateZ(-100px) rotateY(45deg);
+}
+
+#cube div {
+  position: absolute;
+  width: 8vw;
+  height: 8vh;
+}
+
+#avant {
+  transform: translateZ(60px);
+}
+
+#fond {
+  transform: translateZ(-60px);
+}
+
+#gauche {
+  transform: rotateY(90deg);
+}
+
+#droit {
+  transform: rotateY(-90deg);
+}
+
+#cube.logo {
+  animation: tourneCube 25s infinite ease-in-out;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.22, 1);
+}
+
+@keyframes tourneCube {
+  0% {
+    transform: translateZ(-100px) rotateY(0deg);
+  }
+
+  100% {
+    transform: translateZ(-100px) rotateY(360deg);
+  }
+}
+
+@media screen and (max-width: 1501px) {
+  #avant {
+    transform: translateZ(50px);
+  }
+
+  #fond {
+    transform: translateZ(-50px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #avant {
+    transform: translateZ(40px);
+  }
+
+  #fond {
+    transform: translateZ(-40px);
+  }
+
+  #cube {
+    margin-left: vw;
+    padding-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #avant {
+    transform: translateZ(25px);
+  }
+
+  #fond {
+    transform: translateZ(-25px);
+  }
+
+  #cube {
+    margin-left: 10vw;
+    padding-top: 5vh;
+  }
+}

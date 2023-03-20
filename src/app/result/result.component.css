@@ -1,0 +1,142 @@
+.body-component {
+  /* height: 100vh; */
+  background-size: 100%;
+  background-repeat: repeat;
+  background-image: url(../../assets/images/bg-Jeux.jpg);
+}
+
+.titre {
+  font-size: 350%;
+  text-align: center;
+  color: rgb(226, 191, 119);
+}
+
+.imgHover:hover {
+  cursor: pointer;
+}
+
+.imgHover:active {
+  cursor: grabbing;
+}
+
+.sous_titre {
+  font-size: 250%;
+  text-align: center;
+  color: rgb(226, 191, 119);
+  ;
+}
+
+.next {
+  display: flex;
+  justify-content: center;
+}
+
+.all-Posters-displayed {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+}
+
+.poster {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border: 3px solid rgb(226, 191, 119);
+  width: 9%;
+  margin-top: 1%;
+}
+
+.containerInfo {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 18px;
+  margin: 1%;
+  height: 35vh;
+  border: 3px solid rgb(226, 191, 119);
+  gap: 2rem;
+  overflow-y: scroll;
+  max-height: 400vh;
+}
+
+.img-from-api {
+  display: flex;
+  flex-direction: row;
+}
+
+.imgResum {
+  width: 10%;
+  padding-left: 2vw;
+  padding-top: 2vh;
+  margin-right: 1vw;
+}
+
+.resum {
+  margin-top: 2vh;
+}
+
+.audioContent {
+  color: rgb(226, 191, 119);
+}
+
+.credit-scoreFinal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sous_titre p {
+  color: rgb(127, 255, 0);
+  font-size: 24px;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  .poster {
+    width: 14%;
+  }
+
+  .imgResum {
+    padding-top: 5vh;
+    width: 30%;
+    margin: 5px;
+  }
+
+  .img-from-api {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+  }
+
+  .img-from-api div {
+    margin: 20px 0;
+  }
+
+  .containerInfo {
+    font-size: 12px;
+    overflow: scroll;
+    max-height: 400vh;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .imgResum {
+    padding-top: 3vh;
+    height: 50%;
+
+  }
+
+  .titre,
+  .sous_titre {
+    margin-top: 2vh;
+  }
+
+  .containerInfo {
+    font-size: 12px;
+  }
+}

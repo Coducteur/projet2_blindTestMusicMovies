@@ -1,0 +1,25 @@
+<div class="body">
+  <app-logo></app-logo>
+  <audio src="../../assets/universal.mp3" autoplay></audio>
+
+  <div class="title">
+    <h1><span>Welcome </span><span>to </span></h1>
+  </div>
+  <div class="sac">
+    <h1><span>SAC'S </span><span>blindtest</span></h1>
+  </div>
+  <div class="levels">
+    <a [routerLink]="['/rules']">
+      <img class="easy" (click)="easyClic()" src="assets/images/btn-easy.png" alt="level easy">
+    </a>
+    <a [routerLink]="['/rules']">
+      <img class="medium" (click)="mediumClic()" src="assets/images/btn-medium.png" alt="level medium">
+    </a>
+    <a [routerLink]="['/rules']">
+      <img class="hard" (click)="hardClic()" src="assets/images/btn-hard.png" alt="level hard">
+    </a>
+    <a [routerLink]="['/about']">
+      <img class="about" src="assets/images/btn-about.png" alt="button about">
+    </a>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="flex-contain-answers">
+
+    <img class="imgCss" *ngFor="let poster of postersToClickForAnswers" [src]="poster" alt=""
+        (click)="isAnswered(poster, counterQuestion)">
+
+</div>

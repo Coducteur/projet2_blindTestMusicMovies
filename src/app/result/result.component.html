@@ -1,0 +1,51 @@
+<div class="body-component">
+  <div class="titre">
+    <h3>Did you like those musics?</h3>
+  </div>
+  <div class="sous_titre">
+    <h3>You can find them below by clicking on the pictures:</h3>
+    <audio [src]="musicBG" autoplay loop></audio>
+    <p>Congratulations ! you got {{finalScoreToDisplay}} points !</p>
+  </div>
+
+  <div class="all-Posters-displayed">
+    <div class="poster" *ngFor="let movie of moviesToDisplay">
+      <img class="imgHover" (click)="getMovieData(movie.idMov); getMusicData(movie.idDeez)" [src]="movie.answer" />
+    </div>
+  </div>
+  <div *ngIf="imgOfMovie" class="containerInfo">
+    <div class="img-from-api">
+      <img [src]="'https://image.tmdb.org/t/p/w500/' + imgOfMovie.poster_path" class="imgResum" />
+      <div class="resum">
+        <p>
+          Résumé:<br />{{ imgOfMovie.overview }}<br />
+          Budget: {{ imgOfMovie.budget | currency }}<br />
+        </p>
+        <div>
+          <p>
+            Titre: <span class="audioContent">{{ audioOfMovie.title }}</span>
+          </p>
+          <p>
+            Artiste:
+            <span class="audioContent">{{ audioOfMovie.artist.name }}</span>
+          </p>
+          <div>
+            <p>Ecouter sur Deezer:</p>
+            <a class="audioContent" [href]="audioOfMovie.link" target="_blank">{{
+              audioOfMovie.link
+              }}</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="player">
+      <audio (play)="stopMusicBG()" (ended)="playMusicBG()" [src]="audioOfMovie.preview" controls></audio>
+    </div>
+  </div>
+  <div class="credit-scoreFinal-container">
+    <div class="next">
+      <a [routerLink]="['/about']"><button class="bn632-hover bn19">CREDITS</button></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+
+
+.body{
+  margin-top: -60vh;
+  margin-left: 68vw;
+  color: rgb(127, 255, 0);
+  font-size: 20px;
+  border: 7px double rgb(156, 6, 164);
+  height: 120px;
+  width: 120px;
+  padding-left: 1.2vw;
+  padding-top: 5.5vh;
+  border-radius: 50%;
+  font-size: 25px;
+}

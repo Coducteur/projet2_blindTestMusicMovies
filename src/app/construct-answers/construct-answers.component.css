@@ -1,0 +1,55 @@
+img {
+    margin-top: 10vh;
+    width: 250px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+img:active {
+    cursor: grabbing;
+}
+
+.flex-contain-answers {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -15vh;
+}
+
+.imgCss {
+    border: 3px solid white;
+
+}
+
+@media screen and (max-width: 1285px) {
+
+    img {
+        margin-top: 5vh;
+        display: flex;
+        width: 200px;
+        justify-content: center;
+    }
+
+    .flex-contain-answers {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+}
+
+@media screen and (max-width: 855px) {
+
+    img {
+        display: flex;
+        width: 150px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 522px) {
+    img {
+        margin-top: 2vh;
+        width: 35%;
+    }
+}

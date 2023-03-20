@@ -1,0 +1,95 @@
+.body{
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/bgHome.jpg);
+  background-color: black;
+}
+
+
+.title {
+  font-family: "Rubik", sans-serif;
+  font-size: 35px;
+  color: white;
+  margin-left: 35vw;
+  opacity: 1;
+  animation: translateTitle 2.5s ease-in-out;
+}
+
+.sac {
+  font-family: "Rubik", sans-serif;
+  color: white;
+  font-size: 35px;
+  margin-top: 0vh;
+  margin-left: 42vw;
+  opacity: 1;
+  animation: translateTitle 4.2s ease-in-out;
+}
+
+@keyframes translateTitle {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.levels {
+  display: flex;
+  justify-content: center;
+  margin-top: 20vh; 
+  gap: 8%;
+}
+
+.easy,
+.medium,
+.hard {
+  width: 100%;
+}
+
+.about {
+  width: 18vw;
+}
+
+.media {
+  display: flex;
+  margin-top: 800vh;
+}
+
+@media screen and (max-width: 800px) {
+
+.sac, .title {
+  font-size: 15px;
+}
+
+
+.title {
+  margin-top: 20vh;
+  margin-left: 25vw;
+}
+
+.sac {
+  margin-left: 35vw;
+}
+
+.levels {
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15vh;
+  align-items: center;
+}
+
+.easy,
+.medium,
+.hard{
+  width: 30vw;
+}
+
+.about {
+  width: 30vw;
+}
+}
+
